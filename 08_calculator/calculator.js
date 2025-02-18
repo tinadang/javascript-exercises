@@ -16,16 +16,31 @@ const sum = function(numArray) {
   return sum;
 };
 
-const multiply = function() {
+const multiply = function(numArray) {
+  let sum = 1;
 
+	for (const number of numArray) {
+    sum *= number;
+  }
+
+  return sum;
 };
 
-const power = function() {
-	
+const power = function(base, exponent) {
+	return base ** exponent;
 };
 
-const factorial = function() {
-	
+const factorial = function(number) {
+	if (number === 0) {
+    return 1;
+  }
+
+  let factorialArray = [];
+  for (let i = 1; i <= number; i++) {
+    factorialArray.push(i);
+  }
+
+  return multiply(factorialArray);
 };
 
 // Do not edit below this line
